@@ -1,2 +1,5 @@
-<app-server></app-server>
-<app-server></app-server>
+<button class="btn btn-primary" (click)="toggleDisplay()">Display Details</button>
+<p *ngIf="dispStatus">Secret Pass:Tuna</p>
+<!-- <app-server></app-server>
+<app-server></app-server> -->
+<p *ngFor="let dispArr of dispArrs">{{ dispArrs }}</p>
