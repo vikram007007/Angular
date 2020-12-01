@@ -28,4 +28,16 @@ export class ServersComponent implements OnInit {
     }
   }
 
+  getCol() {
+    if(this.incN>5) {
+      return 'blue';
+    }
+  }
+
+  getSty() {
+    if(this.incN > 5) {
+      return true;
+    }
+  }
+
 }
