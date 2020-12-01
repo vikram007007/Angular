@@ -1,8 +1,8 @@
 <button class="btn btn-primary" (click)="toggleDisplay()">Display Details</button>
 <p *ngIf="dispStatus">Secret Pass:Tuna</p>
-<!-- <app-server></app-server>
-<app-server></app-server> -->
+<app-server></app-server>
+<app-server></app-server>
 <p *ngFor="let dispArr of dispArrs"
-[ngStyle]="{backgroundColor:getCol()}"
-[ngClass]="{.count:getSty()}"
->{{ dispArrs }}</p>
+[ngStyle]="{backgroundColor:dispArr > 5?'blue':'transparent'}"
+[ngClass]="{count:dispArr>5?true:false}"
+>{{ dispArr }}</p>

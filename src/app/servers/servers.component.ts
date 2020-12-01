@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
 
   dispStatus=false;
-  dispArrs:number[]=[1];
-  incN=1;
+  dispArrs:number[]=[];
+  incN=0;
 
   constructor() { }
 
@@ -38,6 +38,11 @@ export class ServersComponent implements OnInit {
     if(this.incN > 5) {
       return true;
     }
+  }
+
+  getInc() {
+    var n=this.incN;
+    return n;
   }
 
 }
