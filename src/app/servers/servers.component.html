@@ -1,2 +1,17 @@
-<app-server></app-server>
-<app-server></app-server>
+<label>Server Name</label>
+<!-- <input type="text" class="form-control" 
+(input)="onUpdateServerName($event)"
+> -->
+<input type ="text" class="form-control" 
+[(ngModel)]="serverName">
+<p>{{ serverName }}</p>
+<button class="btn btn-primary" (click)="onAdd()">Add Server</button>
+<div class="row">
+<button class="btn btn-primary" [disabled]="onCreate()" (click)="onResetName()">Reset Server</button>
+</div>
+<div class="row">
+    <button class="btn btn-primary" [disabled]="serverName===''" (click)="serverName=''">Reset Server</button>
+</div>
+<!-- <p [innerText]="createStatus"></p> -->
+<p *ngIf="setServer">{{ serverName }} server is created</p>
+<app-server *ngFor="let server of servers"></app-server>
